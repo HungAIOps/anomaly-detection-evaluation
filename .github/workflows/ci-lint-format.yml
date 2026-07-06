@@ -1,0 +1,35 @@
+name: CI - Lint and Format
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-lint-format-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ruff:
+    name: Ruff Lint and Format Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Ruff
+        run: python -m pip install --upgrade pip ruff
+
+      - name: Run Ruff lint
+        run: ruff check projects
+
+      - name: Run Ruff format check
+        run: ruff format --check projects
