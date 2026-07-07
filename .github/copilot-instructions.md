@@ -30,6 +30,8 @@ Keep each modality in its own project under `projects/` so data contracts, parse
 - Fail fast with specific exceptions and actionable error messages.
 - Keep module import side effects minimal.
 - Write docstrings for public APIs.
+- Do not use emojis or icon characters in comments, docstrings, or commit messages.
+- Keep comments short and only add them when the code is not self-explanatory; explain why, not what.
 
 ## Evaluation Rules
 - Separate preprocessing, feature extraction, model execution, and scoring.

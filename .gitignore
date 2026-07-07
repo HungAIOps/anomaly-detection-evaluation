@@ -13,3 +13,4 @@ dist/
 .coverage
 htmlcov/
 .ipynb_checkpoints/
+plans
