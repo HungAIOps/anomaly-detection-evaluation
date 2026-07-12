@@ -1,0 +1,6 @@
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.5
+statsmodels>=0.14
+sentence-transformers>=3.0.1
+drain3>=0.9.11

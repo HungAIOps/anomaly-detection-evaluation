@@ -32,6 +32,20 @@ Keep each modality in its own project under `projects/` so data contracts, parse
 - Write docstrings for public APIs.
 - Do not use emojis or icon characters in comments, docstrings, or commit messages.
 - Keep comments short and only add them when the code is not self-explanatory; explain why, not what.
+- Remember to update requirements.txt in root folder if needed.
+
+## Sub Porject structure
+- Every sub-project in path ../projects/**/src/<project-name> should follow this structure:
+    - __init__.py: re-export the project's public API (config, model, evaluation functions, etc.) via explicit imports and __all__. Do NOT put CLI logic or business logic here.
+    - __main__.py: CLI entry point. Imports main() from cli.py and calls it, enabling `python -m <project-name>`.
+    - cli.py: define input/output params (argparse) and the main() function that runs and tests the project locally.
+    - preprocessing.py: parse the input file, preprocess data if needed (define as a separate file when the preprocessing step is complex).
+    - model.py: implement the core model logic to classify the log lines (if using an ML approach).
+    - train.py: implement the training logic to train the model (if using an ML approach).
+    - evaluation.py: implement the scoring logic to evaluate the model performance.
+    - algo.py: implement the main logic for algorithm execution if the approach is algorithm-based (not needed if using an ML approach).
+    - config.py: define the fixed configuration params for the project.
+    - utils.py: implement any utility functions needed for the project.
 
 ## Evaluation Rules
 - Separate preprocessing, feature extraction, model execution, and scoring.
@@ -39,12 +53,6 @@ Keep each modality in its own project under `projects/` so data contracts, parse
 - Report metrics in structured outputs such as JSON or CSV.
 - Prevent data leakage between training, validation, and test sets.
 - Keep modality-specific metrics explicit so log, trace, metrics, and event pipelines do not silently share assumptions.
-
-## Testing Rules
-- Every parser, metric, and algorithm must have pytest coverage.
-- Use synthetic or tiny fixture data for unit tests.
-- Add edge-case tests for empty inputs, missing fields, NaNs, and malformed records.
-- Keep tests deterministic and independent.
 
 ## What To Avoid
 - Do not introduce new dependencies unless the standard library, `numpy`, `pandas`, or `scikit-learn` cannot cover the need.

@@ -1,0 +1,19 @@
+Event Type:
+InboundAuthError
+
+Definition:
+The incoming request is rejected because authentication or authorization fails before business logic is executed.
+
+Typical causes:
+- Invalid or expired JWT
+- Invalid API key
+- Missing authentication credentials
+- Access denied
+- Insufficient permissions
+- Authentication failed
+- Authorization failed
+- Unauthorized (401)
+- Forbidden (403)
+
+Related concepts:
+Identity, authentication, authorization, credentials, token, role, permission, security.

@@ -1,0 +1,18 @@
+Event Type:
+DatabaseError
+
+Definition:
+The application cannot communicate with the database or cache because the database infrastructure is unavailable or the connection cannot be established.
+
+Typical scenarios:
+- Database connection refused
+- Database timeout
+- Connection pool exhausted
+- Database server offline
+- Database failover
+- Redis unavailable
+- Cache server unavailable
+- Network failure while connecting to the database
+
+Related concepts:
+PostgreSQL, MySQL, Oracle, SQL Server, MongoDB, Redis, JDBC, HikariCP, HikariPool.
