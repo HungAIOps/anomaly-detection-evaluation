@@ -12,4 +12,4 @@ Focus areas:
 # CLIs
 python -m src.embed_similarity --input ./data/test.csv --text-column log --output ./data/output.csv
 
-python -m log_template --input ./data/test.csv --text-column log --output ./data/template_output.csv
+python -m src.log_template --input ./data/log-raw.csv --text-column message --output ./data/template_output.csv
