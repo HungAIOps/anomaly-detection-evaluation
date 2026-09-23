@@ -1,0 +1,18 @@
+Event Type:
+InternalApplicationError
+
+Definition:
+The request fails because of an unexpected error within the application's own business logic or runtime execution, not because of invalid client input or failures in external dependencies.
+
+Typical causes:
+- NullPointerException
+- IllegalStateException
+- RuntimeException
+- IndexOutOfBoundsException
+- Assertion failure
+- Business logic failure
+- Unexpected exception
+- Invalid SQL statement
+
+Related concepts:
+Business logic, application code, runtime exception, internal bug.

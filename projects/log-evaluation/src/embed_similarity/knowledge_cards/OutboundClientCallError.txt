@@ -1,0 +1,18 @@
+Event Type:
+OutboundClientCallError
+
+Definition:
+The request fails because this service cannot successfully communicate with another internal service or an external API.
+
+Typical causes:
+- HTTP 5xx from downstream service
+- Connection refused
+- Read timeout
+- DNS failure
+- SSL/TLS failure
+- gRPC unavailable
+- Network error
+- Remote service unavailable
+
+Related concepts:
+REST API, HTTP client, Feign, WebClient, gRPC, downstream service, network.

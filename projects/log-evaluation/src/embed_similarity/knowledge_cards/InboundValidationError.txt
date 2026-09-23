@@ -1,0 +1,19 @@
+Event Type:
+InboundValidationError
+
+Definition:
+The incoming request is rejected because its input data is malformed, incomplete, or violates API or business validation rules before normal processing begins.
+
+Typical causes:
+- Missing required field
+- Invalid parameter
+- Invalid JSON
+- Schema validation failed
+- Illegal argument
+- Invalid request format
+- Invalid request body
+- Constraint violation
+- Bad Request (400)
+
+Related concepts:
+Validation, request format, schema, payload, parameter, argument, input.
